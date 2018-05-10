@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Spinners</title>
+    <link rel="stylesheet" href="app.css">
+    <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+  <script>
+      $(document).ready(function(){
+          $(".sp").click(function(){
+            act=parseInt($(this).val());
+            switch(act){
+                case 1: 
+                $("#spinner-block").removeClass("spinner-2");
+                $("#spinner-block").removeClass("spinner-3");
+                $("#spinner-block").addClass("spinner-1");
+                break;
+
+                case 2: 
+                $("#spinner-block").removeClass("spinner-1");
+                $("#spinner-block").removeClass("spinner-3");
+                $("#spinner-block").addClass("spinner-2");
+                break;
+                
+                case 3: 
+                $("#spinner-block").removeClass("spinner-1");
+                $("#spinner-block").removeClass("spinner-2");
+                $("#spinner-block").addClass("spinner-3");
+                break;
+            }
+          })
+      });
+  </script>
+</head>
+<body>
+    <div class="main spinner-1" id="spinner-block">
+        
+    <h1>Spinners</h1>
+    </div>
+    <h3 style="margin-top: 200px;">
+        <input type="radio" name="sp" class="sp" value="1"> Spinner-1
+        <input type="radio" name="sp" class="sp" value="2"> Spinner-2
+        <input type="radio" name="sp" class="sp" value="3"> Spinner-3
+    </h3>
+</body>
+</html>
